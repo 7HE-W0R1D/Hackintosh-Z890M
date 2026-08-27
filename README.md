@@ -12,7 +12,7 @@ Hackintosh file for my Intel Arrow Lake build.
 | WiFi / BT   | (Not working) Realtek® Wi-Fi 7 RTL8922AE |
 | Nvme        | Samsung 9100 Pro 1TB           |
 | RAM         | 4800Mhz DDR5 16G x 2           |
-| MacOS       | 15.7                           |
+| MacOS       | 15.7 / 26.6.2                  |
 | OpenCore    | 1.0.6                          |
 
 ## Notable Changes
