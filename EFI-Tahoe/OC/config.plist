@@ -500,11 +500,6 @@
 				AQAAAA==
 				</data>
 			</dict>
-			<key>PciRoot(0x0)/Pci(0x6,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)</key>
-			<dict>
-				<key>PP,PP_WorkLoadPolicyMask</key>
-				<integer>1</integer>
-			</dict>
 			<key>PciRoot(0x2)/Pci(0x1C,0x4)/Pci(0x0,0x0)</key>
 			<dict>
 				<key>bcmc-firmware-hash</key>
@@ -696,7 +691,7 @@
 				<key>Comment</key>
 				<string>WhateverGreen.kext</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/WhateverGreen</string>
 				<key>MaxKernel</key>
@@ -714,13 +709,31 @@
 				<key>Comment</key>
 				<string>AppleALC.kext</string>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/AppleALC</string>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
 				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
+				<key>BundlePath</key>
+				<string>SimpleHDA.kext</string>
+				<key>Comment</key>
+				<string>SimpleHDA 1.0.0</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/SimpleHDA</string>
+				<key>MaxKernel</key>
+				<string>25.99.99</string>
+				<key>MinKernel</key>
+				<string>25.0.0</string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
 			</dict>
@@ -804,7 +817,7 @@
 				<key>Comment</key>
 				<string>AMFIPass 1.4.1 (RP-CORE)</string>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/AMFIPass</string>
 				<key>MaxKernel</key>
@@ -840,7 +853,7 @@
 				<key>Comment</key>
 				<string>IOSkywalkFamily 1.2.0 downgrade (RP-CORE)</string>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/IOSkywalkFamily</string>
 				<key>MaxKernel</key>
@@ -858,13 +871,49 @@
 				<key>Comment</key>
 				<string>IO80211FamilyLegacy 1.0.0 (RP-CORE)</string>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/IO80211FamilyLegacy</string>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
 				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
+				<key>BundlePath</key>
+				<string>AirPort_RTW89.kext</string>
+				<key>Comment</key>
+				<string>FranciumOS AirPort_RTW89 0.5.0 - rtw89 driver</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/AirPort_RTW89</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string>23.0.0</string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
+				<key>BundlePath</key>
+				<string>AirPort_RTW89.kext/Contents/PlugIns/AirPortRTW89Front.kext</string>
+				<key>Comment</key>
+				<string>FranciumOS AirPort_RTW89 0.5.0 - IO80211 front</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/AirPortRTW89Front</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string>23.0.0</string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
 			</dict>
@@ -894,7 +943,7 @@
 				<key>Comment</key>
 				<string>VoodooHDA 3.6.9-alpha (chris1111, SIP-on injection)</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/VoodooHDA</string>
 				<key>MaxKernel</key>
@@ -929,7 +978,7 @@
 				<key>Comment</key>
 				<string></string>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Identifier</key>
 				<string>com.apple.iokit.IOSkywalkFamily</string>
 				<key>MaxKernel</key>
@@ -945,13 +994,29 @@
 				<key>Comment</key>
 				<string>RTL8125: AppleEthernetRL depends on IOSkywalkFamily, crashes with downgraded Skywalk</string>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Identifier</key>
 				<string>com.apple.driver.AppleEthernetRL</string>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
 				<string>23.0.0</string>
+				<key>Strategy</key>
+				<string>Exclude</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>Comment</key>
+				<string>boot framebuffer IONDRVFramebuffer steals index 0 from NVRMFB</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Identifier</key>
+				<string>com.apple.iokit.IONDRVSupport</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
 				<key>Strategy</key>
 				<string>Exclude</string>
 			</dict>
@@ -1558,7 +1623,7 @@
 			<key>HibernateSkipsPicker</key>
 			<false/>
 			<key>HideAuxiliary</key>
-			<true/>
+			<false/>
 			<key>InstanceIdentifier</key>
 			<string></string>
 			<key>LauncherOption</key>
@@ -1649,7 +1714,7 @@
 			<key>ScanPolicy</key>
 			<integer>0</integer>
 			<key>SecureBootModel</key>
-			<string>Default</string>
+			<string>Disabled</string>
 			<key>Vault</key>
 			<string>Optional</string>
 		</dict>
@@ -1683,6 +1748,50 @@
 				<false/>
 				<key>TextMode</key>
 				<false/>
+			</dict>
+			<dict>
+				<key>Arguments</key>
+				<string></string>
+				<key>Auxiliary</key>
+				<false/>
+				<key>Comment</key>
+				<string>NullMoth: remove the NVIDIA driver at the next start</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Flavour</key>
+				<string>Auto</string>
+				<key>FullNvramAccess</key>
+				<true/>
+				<key>Name</key>
+				<string>1401: Remove NVIDIA driver</string>
+				<key>Path</key>
+				<string>NullMothSafe.efi</string>
+				<key>RealPath</key>
+				<false/>
+				<key>TextMode</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>Arguments</key>
+				<string>once</string>
+				<key>Auxiliary</key>
+				<false/>
+				<key>Comment</key>
+				<string>NullMoth: start macOS once without the NVIDIA driver</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Flavour</key>
+				<string>Auto</string>
+				<key>FullNvramAccess</key>
+				<true/>
+				<key>Name</key>
+				<string>1401: Start once without NVIDIA driver</string>
+				<key>Path</key>
+				<string>NullMothSafe.efi</string>
+				<key>RealPath</key>
+				<false/>
+				<key>TextMode</key>
+				<true/>
 			</dict>
 		</array>
 	</dict>
@@ -1728,17 +1837,19 @@
 				AAAAAAAAAAAAAAAAAAA=
 				</data>
 				<key>boot-args</key>
-				<string>agdpmod=pikera -lilubetaall -ibtcompatbeta darkwake=0 -v</string>
+				<string>alcid=11 keepsyms=1 -lilubetaall -ibtcompatbeta darkwake=0 -v -amfipassbeta nvfb=1 nvaccel=1 nvfbheads=4 -nvkmsnosmooth amfi_get_out_of_my_way=0x1 amfi=0x80 ipc_control_port_options=0</string>
 				<key>csr-active-config</key>
 				<data>
-				AAAAAA==
+				QwoAAA==
 				</data>
 				<key>prev-lang:kbd</key>
 				<data>
-				cnUtUlU6MjUy
+				ZW4tVVM6MjUy
 				</data>
 				<key>run-efi-updater</key>
 				<string>No</string>
+				<key>bluetoothHostControllerSwitchBehavior</key>
+				<string>always</string>
 			</dict>
 		</dict>
 		<key>Delete</key>
@@ -1759,6 +1870,10 @@
 				<string>boot-args</string>
 				<string>ForceDisplayRotationInEFI</string>
 				<string>csr-active-config</string>
+				<string>prev-lang:kbd</string>
+				<string>bluetoothExternalDongleFailed</string>
+				<string>bluetoothInternalControllerInfo</string>
+				<string>bluetoothHostControllerSwitchBehavior</string>
 			</array>
 		</dict>
 		<key>LegacyOverwrite</key>
@@ -1813,7 +1928,9 @@
 			<key>ProcessorType</key>
 			<integer>3841</integer>
 			<key>ROM</key>
-			<data>AAAAAAAA</data>
+			<data>
+			AAAAAAAA
+			</data>
 			<key>SpoofVendor</key>
 			<true/>
 			<key>SystemMemoryStatus</key>
@@ -2076,7 +2193,7 @@
 			<key>ActivateHpetSupport</key>
 			<false/>
 			<key>DisableSecurityPolicy</key>
-			<false/>
+			<true/>
 			<key>EnableVectorAcceleration</key>
 			<true/>
 			<key>EnableVmx</key>
